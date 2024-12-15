@@ -1,0 +1,9 @@
+#Agent rules
+1. When I ask you to perform a task, please read needed documentation in the @docs folder and seek the codebase for relevant files and methods first. Don't make assumptions.
+2. @architecture.md contains the technical architecture, @backend.md contains the backend documentation, @frontend.md contains the frontend documentation and datamodel.md contains the datamodel.
+3. Always perform reasoning using chain of thought before writing code.
+4. When I don't provide you enough context, assume I'm referring to the currently active file.
+5. In case my request is unclear or ambigious, ask for clarification.
+6. After you have created the code, please review and validate it for correctness.
+7. After you have implemented the task, write summary of what you did in the @ai_changelog.md
+8. Frontend code goes to the frondend folder and backend code to the backend folder
