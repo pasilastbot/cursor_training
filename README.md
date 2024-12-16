@@ -20,10 +20,23 @@ The course is organized into several key components:
 - Backend Documentation: `/docs/backend.md`
 - Frontend Documentation: `/docs/frontend.md`
 
-### Implementation Guides
-- Implementation Prompts: `/prompts/implementation_prompts.md`
+### Prompts
+- Design Prompts: `/prompts/design_prompts.md` - Used to create initial documentation and architecture
+- Implementation Prompts: `/prompts/implementation_prompts.md` - Guides feature implementation
 - Task Management: `@todo.md`
 - Change Log: `@ai_changelog.md`
+
+## 📋 Documentation Creation
+
+The documentation in the `/docs` folder is created using structured prompts from `@design_prompts.md`, which includes:
+1. App Description (`description.md`)
+2. Architecture Design (`architecture.md`)
+3. Data Model Design (`datamodel.md`)
+4. Frontend Design (`frontend.md`)
+5. Backend Design (`backend.md`)
+6. Task Planning (`todo.md`)
+
+Each document is created sequentially, with each new document building upon the information in previous documents.
 
 ## 🚀 Getting Started
 
