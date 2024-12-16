@@ -1,9 +1,19 @@
 #Agent rules
-1. When I ask you to perform a task, please read needed documentation in the @docs folder and seek the codebase for relevant files and methods first. Don't make assumptions.
-2. @architecture.md contains the technical architecture, @backend.md contains the backend documentation, @frontend.md contains the frontend documentation and datamodel.md contains the datamodel.
-3. Always perform reasoning using chain of thought before writing code.
-4. When I don't provide you enough context, assume I'm referring to the currently active file.
-5. In case my request is unclear or ambigious, ask for clarification.
-6. After you have created the code, please review and validate it for correctness.
-7. After you have implemented the task, write summary of what you did in the @ai_changelog.md
-8. Frontend code goes to the frondend folder and backend code to the backend folder
+1. When I say implement, please implement the code using following steps using chain of thoughts reasoning.
+  1.1 REQUIRED: First read these files in order:
+    1. @architecture.md
+    2. @datamodel.md
+    3. @backend.md or @frontend.md (based on query)
+  1.2 Chain of thoughts must follow this format:
+    1. "Reading required files..."
+    2. "Analysis: what I found in the files..."
+    3. "Plan: what needs to be done..."
+    4. "Implementation: how I'll do it..."
+  1.3 Seek the codebase for relevant files and methods first for getting context. Don't make assumptions.
+  1.4 Place frontend code in the frontend directory and backend code in the backend directory
+  1.5 Before proceeding with implementation:
+    - Confirm all required files were read
+    - List key findings from each file
+    - Explain how these findings inform the implementation
+6. When I say validate, please review and validate the code for correctness and execute the unit tests for it. If you don't have unit tests, please create them.
+7. When I say record, write summary of what you did in the @ai_changelog.md and update the todo list in the @todo.md (do not remove any tasks, just update their status)
