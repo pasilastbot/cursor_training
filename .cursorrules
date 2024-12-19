@@ -57,3 +57,31 @@ The following command-line tools are available in the tools/ directory:
      * --json: Output results in JSON format
      * --content-only: Output only the main content
 
+3. Image Optimizer Tool (image_optimizer.py):
+   - Purpose: Optimize and scale images for responsive web use
+   - Usage: ./image_optimizer.py input_image.jpg [--output-dir DIR] [--breakpoints W W W] [--quality Q]
+   - Options:
+     * --output-dir, -o: Output directory for processed images (default: optimized)
+     * --breakpoints, -b: Custom width breakpoints in pixels (default: 640 1024 1920)
+     * --quality, -q: Output image quality 0-100 (default: 85)
+   - Features:
+     * Generates WebP format with fallback images
+     * Maintains aspect ratio during resizing
+     * Optimizes file size and quality
+     * Creates responsive image sets for mobile, tablet, and desktop
+
+4. Image Describer Tool (image_describer.py):
+   - Purpose: Analyze images using OpenAI's Vision API and generate descriptive filenames
+   - Usage: ./image_describer.py image.jpg [--rename] [--json]
+   - Options:
+     * --rename: Automatically rename the file based on the AI description
+     * --json: Output results in JSON format
+   - Features:
+     * Uses OpenAI's GPT-4 Vision API for detailed image analysis
+     * Generates human-readable descriptions
+     * Suggests descriptive filenames
+     * Can automatically rename files based on content
+   - Requirements:
+     * Requires OpenAI API key in .env file
+     * Supports common image formats (JPG, PNG, etc.)
+
