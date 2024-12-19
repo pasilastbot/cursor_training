@@ -1,19 +1,59 @@
 #Agent rules
-1. When I say implement, please implement the code using following steps using chain of thoughts reasoning.
-  1.1 REQUIRED: First read these files in order:
-    1. @architecture.md
-    2. @datamodel.md
-    3. @backend.md or @frontend.md (based on query)
-  1.2 Chain of thoughts must follow this format:
+1. The system is documented in the document folder under following documents. Please keep them up to date according to my input and feedback.
+   1.1 description.md:
+       - Provide concise description of the app or system idea
+       - Document core use cases and features
+   2.2 architecture.md:
+       - Define full technical stack (frontend/backend frameworks, databases)
+       - Testing frameworks and strategy
+   3.3 datamodel.md:
+       - Document all entities, attributes and relationships
+   4.4 frontend.md:
+       - List and describe all views/screens
+       - Define UI/UX patterns and styling approach
+   5.5 backend.md:
+       - Document all API endpoints and authentication
+       - Define service architecture and components
+   6.6 todo.md
+       - Tasks by logical areas and mark their status (✅ done, ⏳ in progress, ❌ not started). Next priority tasks in the end.
+       - Prefer full stack tasks.
+   6.7 ai_changelog.md
+       - Changelog of changes done
+
+2. When I say implement, please implement the code using following steps using chain of thoughts reasoning.
+  2.1 REQUIRED: First read the needed documentation from the document folder
+  2.2 Chain of thoughts must follow this format:
     1. "Reading required files..."
     2. "Analysis: what I found in the files..."
     3. "Plan: what needs to be done..."
     4. "Implementation: how I'll do it..."
-  1.3 Seek the codebase for relevant files and methods first for getting context. Don't make assumptions.
-  1.4 Place frontend code in the frontend directory and backend code in the backend directory
-  1.5 Before proceeding with implementation:
+  2.3 Scan the codebase for relevant files and methods first for getting context. Don't make assumptions.
+  2.4 Place frontend code in the frontend directory and backend code in the backend directory
+  2.5 Before proceeding with implementation:
     - Confirm all required files were read
     - List key findings from each file
     - Explain how these findings inform the implementation
-6. When I say validate, please review and validate the code for correctness and execute the unit tests for it. If you don't have unit tests, please create them.
-7. When I say record, write summary of what you did in the @ai_changelog.md and update the todo list in the @todo.md (do not remove any tasks, just update their status)
+3. When I say validate, please review and validate the code for correctness and execute the unit tests for it. If you don't have unit tests, please create them.
+4. When I say record, write summary of what you did in the ai_changelog.md and update the todo list in the todo.md (do not remove any tasks, just update their status)
+5. When I say invent, please implement a tool in the tools/ directory and write a tool description in .cursorrules file. Run it.
+6. When I say design, please plan for the app or change and update all needed documentation
+7. All frontend code goes user frontend folder and backend in backend folder. No not create anything but documentation under main folder
+
+
+#Web Tools
+The following command-line tools are available in the tools/ directory:
+
+1. Web Search Tool (web_search.py):
+   - Purpose: Search the web using DuckDuckGo API
+   - Usage: ./web_search.py "your search query" [--max-results N] [--json]
+   - Options:
+     * --max-results: Maximum number of results to return (default: 5)
+     * --json: Output results in JSON format
+
+2. Web Reader Tool (web_reader.py):
+   - Purpose: Read and parse webpage content
+   - Usage: ./web_reader.py "https://example.com" [--json] [--content-only]
+   - Options:
+     * --json: Output results in JSON format
+     * --content-only: Output only the main content
+
